@@ -17,11 +17,6 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 html, body, [class*="css"] { font-family: 'Sora', sans-serif; color-scheme: dark !important; }
 .main { background-color: #0f1117; }
-.stApp { background-color: #0f1117 !important; }
-[data-testid="stAppViewContainer"] { background-color: #0f1117 !important; }
-[data-testid="stAppViewBlockContainer"] { background-color: #0f1117 !important; }
-section[data-testid="stMain"] { background-color: #0f1117 !important; }
-
 #
 
 .kpi-card {
