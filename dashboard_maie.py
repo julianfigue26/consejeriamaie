@@ -21,8 +21,7 @@ html, body, [class*="css"] { font-family: 'Sora', sans-serif; color-scheme: dark
 [data-testid="stAppViewContainer"] { background-color: #0f1117 !important; }
 [data-testid="stAppViewBlockContainer"] { background-color: #0f1117 !important; }
 section[data-testid="stMain"] { background-color: #0f1117 !important; }
-[data-testid="stHeader"] { background-color: #0f1117 !important; }
-[data-testid="stToolbar"] { background-color: #0f1117 !important; }
+
 #
 
 .kpi-card {
