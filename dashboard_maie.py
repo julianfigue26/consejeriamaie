@@ -30,8 +30,10 @@ section[data-testid="stMain"] { background-color: #0f1117 !important; }
 .stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; border-radius: 8px !important; box-shadow: none !important; }
 .stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; border-radius: 8px !important; box-shadow: none !important; }
 *:focus { outline: none !important; }
-.stSelectbox > div > div { background-color: #0d1020 !important; color: #c4cce8 !important; }
 .stTextInput > div > div > input { background-color: #0d1020 !important; color: #c4cce8 !important; }
+.stTextInput > div > div > input::placeholder { color: #6b7db3 !important; opacity: 1 !important; }
+
+
 .stButton > button { background-color: #0d1020 !important; color: #c4cce8 !important; border-color: #2a3050 !important; }
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
