@@ -25,6 +25,9 @@ html, body, [class*="css"] { font-family: 'Sora', sans-serif; }
 [data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
 .stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; }
 .stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
+[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; border-radius: 8px !important; }
+.stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; border-radius: 8px !important; }
+.stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; border-radius: 8px !important; }
 
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
