@@ -17,6 +17,12 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 html, body, [class*="css"] { font-family: 'Sora', sans-serif; }
 .main { background-color: #0f1117; }
+[data-baseweb="input"]:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
+[data-baseweb="select"]:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
+[data-baseweb="input"] { border-color: #2a3050 !important; }
+[data-baseweb="select"] { border-color: #2a3050 !important; }
+*:focus { outline-color: #4f8ef7 !important; }
+#
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
     border: 1px solid #2a3050; border-radius: 16px;
