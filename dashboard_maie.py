@@ -32,8 +32,6 @@ section[data-testid="stMain"] { background-color: #0f1117 !important; }
 *:focus { outline: none !important; }
 .stTextInput > div > div > input { background-color: #0d1020 !important; color: #c4cce8 !important; }
 .stTextInput > div > div > input::placeholder { color: #6b7db3 !important; opacity: 1 !important; }
-
-
 .stButton > button { background-color: #0d1020 !important; color: #c4cce8 !important; border-color: #2a3050 !important; }
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
