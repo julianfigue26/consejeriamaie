@@ -1,6 +1,4 @@
-import streamlit as st
-import pandas as pd
-#
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,24 +11,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
-hide_st_style = """
-            <style>
-            /* Oculta el menú hamburguesa y el header */
-            #MainMenu {visibility: hidden;}
-            header {visibility: hidden;}
-            
-            /* Oculta el pie de página "Made with Streamlit" */
-            footer {visibility: hidden;}
-            
-            /* Oculta el botón de Deploy que sale arriba a la derecha */
-            .stAppDeployButton {display: none !important;}
-            
-            /* Elimina el espacio extra en la parte superior */
-            .block-container {padding-top: 0rem;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.markdown("""
 <style>
