@@ -23,6 +23,12 @@ html, body, [class*="css"] { font-family: 'Sora', sans-serif; color-scheme: dark
 section[data-testid="stMain"] { background-color: #0f1117 !important; }
 [data-testid="stHeader"] { background-color: #0f1117 !important; }
 [data-testid="stToolbar"] { background-color: #0f1117 !important; }
+.stSelectbox > div > div { background-color: #0d1020 !important; color: #c4cce8 !important; }
+.stRadio > div { background-color: transparent !important; }
+.stTextInput > div > div > input { background-color: #0d1020 !important; color: #c4cce8 !important; }
+button[kind="secondary"] { background-color: #0d1020 !important; color: #c4cce8 !important; border-color: #2a3050 !important; }
+button[kind="primary"] { background-color: #0d1020 !important; color: #c4cce8 !important; }
+.stButton > button { background-color: #0d1020 !important; color: #c4cce8 !important; border-color: #2a3050 !important; }
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
     border: 1px solid #2a3050; border-radius: 16px;
