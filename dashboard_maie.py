@@ -22,6 +22,10 @@ html, body, [class*="css"] { font-family: 'Sora', sans-serif; }
 [data-baseweb="input"] { border-color: #2a3050 !important; }
 [data-baseweb="select"] { border-color: #2a3050 !important; }
 *:focus { outline-color: #4f8ef7 !important; }
+[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
+.stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; }
+.stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
+
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
     border: 1px solid #2a3050; border-radius: 16px;
