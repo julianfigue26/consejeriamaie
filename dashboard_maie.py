@@ -172,30 +172,30 @@ st.markdown("""
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.markdown(f'''<div class="kpi-card total">
+    st.markdown(f\'\'\'<div class="kpi-card total">
       <div class="kpi-label">Total Remisiones</div>
       <div class="kpi-value total">{total}</div>
       <div class="kpi-sub">registros en el periodo</div>
-    </div>''', unsafe_allow_html=True)
+    </div>\'\'\', unsafe_allow_html=True)
 with c2:
-    st.markdown(f'''<div class="kpi-card atendidas">
+    st.markdown(f\'\'\'<div class="kpi-card atendidas">
       <div class="kpi-label">Atendidas</div>
       <div class="kpi-value atend">{atendidas}</div>
       <div class="kpi-sub">con fecha de seguimiento 1</div>
       <div class="kpi-pct atend">{pct_atend}% del total</div>
-    </div>''', unsafe_allow_html=True)
+    </div>\'\'\', unsafe_allow_html=True)
 with c3:
-    st.markdown(f'''<div class="kpi-card pendientes">
+    st.markdown(f\'\'\'<div class="kpi-card pendientes">
       <div class="kpi-label">Pendientes</div>
       <div class="kpi-value pend">{pendientes}</div>
       <div class="kpi-sub">sin fecha de atencion</div>
       <div class="kpi-pct pend">{pct_pend}% del total</div>
-    </div>''', unsafe_allow_html=True)
+    </div>\'\'\', unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown('<p class="section-title">Cobertura por Programa</p>', unsafe_allow_html=True)
-st.markdown('<p class="section-sub">Remisiones totales vs. atendidas por cada programa academico</p>', unsafe_allow_html=True)
+st.markdown(\'<p class="section-title">Cobertura por Programa</p>\', unsafe_allow_html=True)
+st.markdown(\'<p class="section-sub">Remisiones totales vs. atendidas por cada programa academico</p>\', unsafe_allow_html=True)
 
 prog_df = dff.groupby(col_programa).agg(Total=("ATENDIDO","count"), Atendidas=("ATENDIDO","sum")).reset_index()
 prog_df["Pendientes"] = prog_df["Total"] - prog_df["Atendidas"]
@@ -233,8 +233,8 @@ with st.expander("Ver tabla detallada por programa"):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown('<p class="section-title">Gestion por Docente Consejero</p>', unsafe_allow_html=True)
-st.markdown('<p class="section-sub">Remisiones atendidas y pendientes por consejero</p>', unsafe_allow_html=True)
+st.markdown(\'<p class="section-title">Gestion por Docente Consejero</p>\', unsafe_allow_html=True)
+st.markdown(\'<p class="section-sub">Remisiones atendidas y pendientes por consejero</p>\', unsafe_allow_html=True)
 
 doc_df = dff.groupby(col_docente).agg(Atendidas=("ATENDIDO","sum"), Total=("ATENDIDO","count")).reset_index()
 doc_df["Pendientes"] = doc_df["Total"] - doc_df["Atendidas"]
@@ -285,8 +285,8 @@ with st.expander("Ver tabla detallada por docente"):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown('<p class="section-title">Motivos de Remision</p>', unsafe_allow_html=True)
-st.markdown('<p class="section-sub">Estado de atencion detallado por cada motivo de remision</p>', unsafe_allow_html=True)
+st.markdown(\'<p class="section-title">Motivos de Remision</p>\', unsafe_allow_html=True)
+st.markdown(\'<p class="section-sub">Estado de atencion detallado por cada motivo de remision</p>\', unsafe_allow_html=True)
 
 mot_df = dff.groupby(col_motivo).agg(Total=("ATENDIDO","count"), Atendidas=("ATENDIDO","sum")).reset_index()
 mot_df["Pendientes"] = mot_df["Total"] - mot_df["Atendidas"]
@@ -301,7 +301,7 @@ for i, (_, row) in enumerate(mot_df.iterrows()):
     pct_a = row["Pct"]
     pct_p = round(100 - pct_a, 1)
     with cols_mot[i % 3]:
-        st.markdown(f'''
+        st.markdown(f\'\'\'
         <div class="motivo-card" style="border-top:3px solid {color};">
           <div class="motivo-card-title">{nombre}</div>
           <div style="font-family:monospace;font-size:36px;font-weight:700;color:{color};margin-bottom:8px;">{int(row["Total"])}</div>
@@ -316,12 +316,12 @@ for i, (_, row) in enumerate(mot_df.iterrows()):
             <span style="font-size:13px;color:{color};font-weight:700">{pct_a}% atendido</span>
             <span style="font-size:13px;color:#4a5578">{pct_p}% pendiente</span>
           </div>
-        </div>''', unsafe_allow_html=True)
+        </div>\'\'\', unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown('<p class="section-title">Consulta por Estudiante</p>', unsafe_allow_html=True)
-st.markdown('<p class="section-sub">Ingresa el ID del estudiante para ver su seguimiento</p>', unsafe_allow_html=True)
+st.markdown(\'<p class="section-title">Consulta por Estudiante</p>\', unsafe_allow_html=True)
+st.markdown(\'<p class="section-sub">Ingresa el ID del estudiante para ver su seguimiento</p>\', unsafe_allow_html=True)
 
 if col_id is None:
     st.warning("No se encontro columna de ID en el archivo.")
@@ -370,7 +370,7 @@ else:
                 else:
                     estado_color, estado_texto, estado_bg, estado_border = "#f7a34f", "Pendiente", "#1a1520", "#f7a34f44"
 
-                st.markdown(f'''
+                st.markdown(f\'\'\'
                 <div style="background:linear-gradient(135deg,#1a1f2e,#1e2640);border:1px solid #2a3050;border-radius:16px;padding:28px;margin-top:16px;">
                   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
                     <div>
@@ -409,7 +409,7 @@ else:
                     <div style="font-size:10px;color:#6b7db3;letter-spacing:1px;font-weight:700;text-transform:uppercase;margin-bottom:8px;">Seguimiento Realizado</div>
                     <div style="font-size:13px;color:{"#c4cce8" if seguimiento else "#f7a34f"};line-height:1.6;">{"Pendiente por realizar seguimiento" if not seguimiento else seguimiento}</div>
                   </div>
-                </div>''', unsafe_allow_html=True)
+                </div>\'\'\', unsafe_allow_html=True)
 
 st.markdown("""
 <div style='text-align:center;padding:20px 0 10px;'>
