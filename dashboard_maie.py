@@ -39,7 +39,6 @@ section[data-testid="stMain"] { background-color: #0f1117 !important; }
     padding: 24px 28px; text-align: center;
     position: relative; overflow: hidden;
 }
-
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
     border: 1px solid #2a3050; border-radius: 16px;
