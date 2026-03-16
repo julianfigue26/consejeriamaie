@@ -15,19 +15,30 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
-html, body, [class*="css"] { font-family: 'Sora', sans-serif; }
+html, body, [class*="css"] { font-family: 'Sora', sans-serif; color-scheme: dark !important; }
 .main { background-color: #0f1117; }
-[data-baseweb="input"]:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
-[data-baseweb="select"]:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
-[data-baseweb="input"] { border-color: #2a3050 !important; }
-[data-baseweb="select"] { border-color: #2a3050 !important; }
-*:focus { outline-color: #4f8ef7 !important; }
-[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
-.stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; }
-.stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; }
-[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; border-radius: 8px !important; }
-.stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; border-radius: 8px !important; }
-.stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; box-shadow: 0 0 0 1px #4f8ef7 !important; border-radius: 8px !important; }
+.stApp { background-color: #0f1117 !important; }
+[data-testid="stAppViewContainer"] { background-color: #0f1117 !important; }
+[data-testid="stAppViewBlockContainer"] { background-color: #0f1117 !important; }
+section[data-testid="stMain"] { background-color: #0f1117 !important; }
+[data-testid="stHeader"] { background-color: #0f1117 !important; }
+[data-testid="stToolbar"] { background-color: #0f1117 !important; }
+[data-baseweb="input"] { border-color: #2a3050 !important; box-shadow: none !important; }
+[data-baseweb="select"] { border-color: #2a3050 !important; box-shadow: none !important; }
+[data-baseweb="input"]:focus-within { border-color: #4f8ef7 !important; box-shadow: none !important; }
+[data-baseweb="select"]:focus-within { border-color: #4f8ef7 !important; box-shadow: none !important; }
+.stSelectbox div[data-baseweb="select"] > div { border-color: #2a3050 !important; border-radius: 8px !important; box-shadow: none !important; }
+.stSelectbox div[data-baseweb="select"] > div:focus-within { border-color: #4f8ef7 !important; border-radius: 8px !important; box-shadow: none !important; }
+*:focus { outline: none !important; }
+.stSelectbox > div > div { background-color: #0d1020 !important; color: #c4cce8 !important; }
+.stTextInput > div > div > input { background-color: #0d1020 !important; color: #c4cce8 !important; }
+.stButton > button { background-color: #0d1020 !important; color: #c4cce8 !important; border-color: #2a3050 !important; }
+.kpi-card {
+    background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
+    border: 1px solid #2a3050; border-radius: 16px;
+    padding: 24px 28px; text-align: center;
+    position: relative; overflow: hidden;
+}
 
 .kpi-card {
     background: linear-gradient(135deg, #1a1f2e 0%, #1e2640 100%);
