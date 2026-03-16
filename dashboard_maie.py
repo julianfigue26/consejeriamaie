@@ -16,10 +16,18 @@ st.set_page_config(
 
 hide_st_style = """
             <style>
+            /* Oculta el menú hamburguesa y el header */
             #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
             header {visibility: hidden;}
-            .stAppDeployButton {display: none;} 
+            
+            /* Oculta el pie de página "Made with Streamlit" */
+            footer {visibility: hidden;}
+            
+            /* Oculta el botón de Deploy que sale arriba a la derecha */
+            .stAppDeployButton {display: none !important;}
+            
+            /* Elimina el espacio extra en la parte superior */
+            .block-container {padding-top: 0rem;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
